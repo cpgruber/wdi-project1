@@ -32,7 +32,7 @@ var war = {
   },
   initGraph:function(players){
     this.components.singleGen = d3.svg.line().x(function(d){return 450+((26-d)*10)})
-       .y(function(d,i){return 50+(i*125)}).interpolate('linear');
+       .y(function(d,i){return 50+(i*125)}).interpolate('cardinal');
     var lineGen = this.components.singleGen;
     this.components.winnerLines = this.components.graph.selectAll('.winLine').data([0,52]).enter()
       .append('path').attr('class','winLine')
